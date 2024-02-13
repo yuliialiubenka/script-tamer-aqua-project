@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkscript_tamer_aqua_project=self.webpackChunkscript_tamer_aqua_project||[]).push([[827],{7827:function(n,e,t){t.r(e),t.d(e,{default:function(){return d}});t(2791);var r,a,u=t(8105),c=t(168),i=t(7924),s=i.default.div(r||(r=(0,c.Z)(["\n    display: flex;\n    margin: 100px auto;\n"]))),f=i.default.h1(a||(a=(0,c.Z)(["\n    font-size: 32px;\n"]))),p=t(3329);function d(){return(0,p.jsx)(u.TD,{children:(0,p.jsx)(s,{children:(0,p.jsx)(f,{children:"Not found page"})})})}}}]);
+//# sourceMappingURL=827.e8cbacd1.chunk.js.map
