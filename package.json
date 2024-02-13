@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "script-tamer-aqua-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Bird-Forest.github.io/water-tracker-tw/",
+  "homepage": "https://yuliialiubenka.github.io/script-tamer-aqua-project/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
     "@testing-library/jest-dom": "^5.16.3",
