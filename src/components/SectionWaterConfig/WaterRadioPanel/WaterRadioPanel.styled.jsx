@@ -72,18 +72,7 @@ export const StyledRadioPanel = styled.div`
         border-radius: 50%;
         border: 1px solid ${theme.colors.primaryAccent};
         background-color: ${theme.colors.primaryLight};
-
-        /* animation-name: circle;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards; */
       }
-
-      /* @keyframes circle {
-        100% {
-          left: calc(${({ $newValue }) => $newValue}% - (7px));
-        }
-      } */
 
       &::after {
         content: '';
@@ -99,18 +88,7 @@ export const StyledRadioPanel = styled.div`
         border-radius: 10px;
         background-color: ${theme.colors.secondaryBlue};
         background-color: ${({ $bgColor }) => $bgColor};
-
-        /* animation-name: line;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards; */
       }
-
-      /* @keyframes line {
-        100% {
-          width: calc(${({ $newValue }) => $newValue}%);
-        }
-      } */
 
       .line-start,
       .line-center,

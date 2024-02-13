@@ -25,14 +25,6 @@ const UserLogoModal = ({ closeModal }) => {
     setOpenUserLogoutModal(true);
   };
 
-  //   const closeUserInfoModal = () => {
-  //     setOpenUserInfoModal(false);
-  //   };
-
-  //   const closeUserLogoutModal = () => {
-  //     setOpenUserLogoutModal(false);
-  //   };
-
   return (
     <>
       <Div>
@@ -59,9 +51,6 @@ const UserLogoModal = ({ closeModal }) => {
         <GlobalModal
           openModal={isOpenUserInfoModal}
           setOpenModal={setOpenUserInfoModal}
-         //   $position={'center'}
-          //  width={1008}
-   
         >
           <SettingModal title={'Title'} />
         </GlobalModal>
@@ -71,19 +60,10 @@ const UserLogoModal = ({ closeModal }) => {
           $position={'center'}
           openModal={isOpenUserLogoutModal}
           setOpenModal={setOpenUserLogoutModal}
-         //  width={592}
         >
           <UserLogoutModal onClose={setOpenUserLogoutModal} title={'Log out'} />
         </GlobalModal>
       )}
-
-      {/* Модальне вікно для settings */}
-      {/* {isOpenUserInfoModal ?? <SettingModal onClose={closeUserInfoModal} />} */}
-
-      {/* Модальне вікно для logout */}
-      {/* {isOpenUserLogoutModal ?? (
-        <UserLogoutModal onClose={closeUserLogoutModal} />
-      )} */}
     </>
   );
 };

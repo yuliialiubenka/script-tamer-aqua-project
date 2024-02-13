@@ -20,11 +20,6 @@ const authPersistConfig = {
   whitelist: ['token', 'user'],
 };
 
-// const trackerPersistConfig = {
-//   key: 'tracker',
-//   storage,
-// };
-
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
   tracker: trackerReducer,
@@ -43,17 +38,3 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
-// export const store = configureStore({
-//   reducer: {
-//     auth: persistReducer(authPersistConfig, authReducer),
-//     tracker: persistReducer(trackerPersistConfig, trackerReducer),
-//   },
-//   middleware: getDefaultMiddleware =>
-//     getDefaultMiddleware({
-//       serializableCheck: {
-//         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-//       },
-//     }),
-//   devTools: process.env.NODE_ENV === 'development',
-// });

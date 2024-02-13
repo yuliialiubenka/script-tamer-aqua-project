@@ -108,8 +108,6 @@ export const FormStyled = styled.form`
   input {
     display: flex;
     align-items: flex-start;
-
-    /* width: 120px; */
     gap: 10px;
     padding: 12px 10px;
     margin-bottom: 24px;

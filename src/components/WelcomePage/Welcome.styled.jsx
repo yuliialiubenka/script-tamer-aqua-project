@@ -8,21 +8,17 @@ export const WrapMain = styled.div`
   align-items: flex-start;
   padding: 24px 20px;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   @media screen and (min-width: 768px) {
-    padding: 40px 32px;
+    padding: 40px 20px;
   }
   @media screen and (min-width: 1440px) {
-    padding: 80px 210px 0 210px;
+    padding: 80px 20px 0 20px;
     justify-content: center;
     align-items: center;
-    margin-bottom: auto;
   }
 `;
 export const TitleMain = styled.h1`
-  // display: flex;
-  // justify-content: flex-start;
-  // align-items: flex-start;
   text-align: start;
   overflow-wrap: normal;
   color: #2f2f2f;
@@ -38,7 +34,7 @@ export const WrapMainContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
-  margin: 0;
+  margin: auto;
   padding: 0;
   @media screen and (min-width: 768px) {
     gap: 60px;
@@ -124,7 +120,6 @@ export const BtnTryTracker = styled.button`
   min-width: 280px;
   height: 36px;
   border-radius: 10px;
-  color: #fff;
   text-align: center;
   font-family: Roboto;
   font-size: 16px;
@@ -136,8 +131,6 @@ export const BtnTryTracker = styled.button`
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-  // cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  // background-color: ${({ disabled }) => (disabled ? '#8F8F8F' : '#407BFF')};
   color: ${theme.colors.primaryLight};
   border: none;
   margin: 0;

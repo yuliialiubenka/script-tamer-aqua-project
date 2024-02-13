@@ -35,15 +35,12 @@ export const WrapRender = styled.div`
   background-image: url(${bg_desk_elem});
 
   @media screen and (min-width: 320px) {
-  
-
     /* background-position-x: center;
     background-position-y: 108px; */
     /* background-size: cover; */
   }
 
   @media screen and (min-width: 768px) {
-    
     /* background-position-y: 90px; */
     /* background-repeat: no-repeat;
      */
@@ -57,8 +54,8 @@ export const WrapRender = styled.div`
 `;
 export const WrapWelcomePage = styled.div`
   display: flex;
-  width: 100vw;
-  height: 93vh;
+  width: 100%;
+  height: 92vh;
   margin: 0;
   padding: 0;
   background-image: url(${WaterMainMobile});

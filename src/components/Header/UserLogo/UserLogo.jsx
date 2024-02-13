@@ -15,15 +15,11 @@ import { rotate180DegVariants } from './rotateanimation';
 
 const UserLogo = () => {
   const userProfile = useSelector(selectUser);
-  // console.log(userProfile);
-  // const auth = useSelector(selectIsLoggedIn);
-  // console.log(auth);
 
   const name = userProfile?.name;
   const avatar = userProfile?.avatarURL;
   const defaultName = name ? name.slice(0, 1).toUpperCase() : 'V';
 
-  //   const modalRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleButtonClick = e => {
@@ -47,11 +43,6 @@ const UserLogo = () => {
         setIsOpen(false);
       }
     };
-    //  const closeModal = e => {
-    //    if (modalRef.current && !modalRef.current.contains(e.target)) {
-    //      setIsOpen(false);
-    //    }
-    //  };
 
     if (isOpen) {
       window.addEventListener('keydown', handleEscapeKey);
@@ -68,7 +59,6 @@ const UserLogo = () => {
     <UserLogoContainer>
       <UserLogoBtn
         onClick={e => handleButtonClick(e)}
-        //   ref={modalRef}
         aria-label="User Logo"
       >
         <UserName>{name}</UserName>

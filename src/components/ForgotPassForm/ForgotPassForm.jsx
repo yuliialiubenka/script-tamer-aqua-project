@@ -32,7 +32,6 @@ const ForgotPassForm = () => {
     },
     onSubmit: (values) => {
       dispatch(forgotPassword(values));
-      console.log(values);
     },
   });
 

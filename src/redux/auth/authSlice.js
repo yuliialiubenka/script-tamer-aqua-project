@@ -11,7 +11,6 @@ import {
 } from './operations';
 
 const initialState = {
-  // dailyNorma: 2,
   user: {
     _id: null,
     name: null,
@@ -23,7 +22,7 @@ const initialState = {
   token: null,
   isLoggedIn: false,
   isRefreshing: false,
-  loading: false, // Додано ключ loading
+  loading: false,
 };
 
 const authSlice = createSlice({

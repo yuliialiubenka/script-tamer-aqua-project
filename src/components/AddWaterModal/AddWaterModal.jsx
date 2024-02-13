@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Notiflix from 'notiflix';
+import { paramsForNotify } from '../../redux/notifications';
 
 import {
   addWaterEntry,
@@ -69,14 +70,14 @@ const TodayListModal = ({ isEditing, data, closeModal }) => {
 
     if (amountWater === 0) {
       Notiflix.Notify.warning(
-        'A non-zero value must be entered for the amount of water'
+        'A non-zero value must be entered for the amount of water', paramsForNotify
       );
       return;
     }
 
     if (amountWater < 0 || amountWater === '') {
       Notiflix.Notify.warning(
-        'It is necessary to enter a positive value for the amount of water'
+        'It is necessary to enter a positive value for the amount of water', paramsForNotify
       );
       return;
     }
@@ -90,26 +91,26 @@ const TodayListModal = ({ isEditing, data, closeModal }) => {
       // Edit mode
       dispatch(updateWaterEntry({ ...saveWater, waterId: data._id }))
         .then(() => {
-          Notiflix.Notify.success('Amount of water updated successfully!');
+          Notiflix.Notify.success('Amount of water updated successfully!', paramsForNotify);
           dispatch(getDailyWaterAmount());
           closeModal();
         })
         .catch(error => {
           Notiflix.Notify.failure(
-            `Failed to update amount of water: ${error.message}`
+            `Failed to update amount of water: ${error.message}`, paramsForNotify
           );
         });
     } else {
       // Add mode
       dispatch(addWaterEntry(saveWater))
         .then(() => {
-          Notiflix.Notify.success('Amount of water added successfully!');
+          Notiflix.Notify.success('Amount of water added successfully!', paramsForNotify);
           dispatch(getDailyWaterAmount());
           closeModal();
         })
         .catch(error => {
           Notiflix.Notify.failure(
-            `Failed to add amount of water: ${error.message}`
+            `Failed to add amount of water: ${error.message}`, paramsForNotify
           );
         });
     }

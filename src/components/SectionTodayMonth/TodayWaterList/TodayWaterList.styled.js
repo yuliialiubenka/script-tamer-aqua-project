@@ -42,9 +42,9 @@ export const TodayStyle = styled.h2`
 `;
 
 export const ListAddDiv = styled.div`
-display: flex;
-flex-direction: column;
- justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: inherit;
   max-height: 212px;
   @media screen and (min-width: 768px) {
@@ -86,16 +86,12 @@ export const ListItem = styled.li`
   justify-content: space-between;
   align-items: center;
   gap: 38px;
-
-  // height: 36px;
-
   padding: 12px 0 12px 0;
   margin: 0 4px 0 0;
   border-bottom: 1px solid ${theme.colors.secondaryLightBlue};
 `;
 
 export const InfoWrap = styled.div`
-  // width: 166px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -214,16 +210,13 @@ export const StyledLi = styled.li`
   list-style: none;
 `;
 
-
 export const StyledQuestion = styled.p`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100px;
-color: var(--Primery-Color-Black, #2f2f2f);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 133.3%;
-
-
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: var(--Primery-Color-Black, #2f2f2f);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 133.3%;
+`;

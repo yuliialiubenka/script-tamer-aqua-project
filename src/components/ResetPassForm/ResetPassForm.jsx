@@ -55,7 +55,7 @@ const ResetPassForm = () => {
       try {
         await dispatch(resetPassword({ password }));
       } catch (error) {
-        console.log(error);
+        return error;
       }
     },
   });

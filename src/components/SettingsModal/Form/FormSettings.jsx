@@ -19,6 +19,7 @@ import {
   FormContainer,
 } from './FormSettings.styled';
 import { Notify } from 'notiflix';
+import { paramsForNotify } from '../../../redux/notifications';
 
 export const FormSettings = () => {
   const { user } = useAuth();
@@ -65,15 +66,15 @@ export const FormSettings = () => {
     e.preventDefault();
 
     if (password && !newPassword) {
-      Notify.failure('Please enter new password');
+      Notify.failure('Please enter new password', paramsForNotify);
       return;
     }
     if (!password && newPassword) {
-      Notify.failure('Please enter old password');
+      Notify.failure('Please enter old password', paramsForNotify);
       return;
     }
     if (newPassword !== repeatPassword) {
-      Notify.failure("Passwords don't match");
+      Notify.failure("Passwords don't match", paramsForNotify);
       return;
     }
 
@@ -100,7 +101,7 @@ export const FormSettings = () => {
     }
 
     if (Object.keys(updatedData).length === 0) {
-      Notify.info('No changes made.');
+      Notify.info('No changes made.', paramsForNotify);
       return;
     }
 

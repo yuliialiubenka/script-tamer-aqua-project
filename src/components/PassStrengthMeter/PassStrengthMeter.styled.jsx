@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MeterContainer = styled.div`
   width: 100%;
-  display: ${(props) => (props.$showMeter ? 'block' : 'none')}; // Встановлення відображення або приховання
+  display: ${(props) => (props.$showMeter ? 'block' : 'none')};
 `;
 
 export const StrengthMeterBar = styled.div`

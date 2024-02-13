@@ -4,10 +4,8 @@ export const StyledHomePage = styled.section`
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-
   padding: 24px 20px 40px;
   margin: 0 auto;
-
   width: 320px;
 
   @media only screen and (min-width: 768px) {
@@ -20,7 +18,6 @@ export const StyledHomePage = styled.section`
     row-gap: 0;
     column-gap: 32px;
     padding-top: 20px;
-
     width: 1256px;
   }
 `;

@@ -2,14 +2,11 @@ import { StyledRadioPanel } from './WaterRadioPanel.styled';
 import { GoPlusCircle } from 'react-icons/go';
 import theme from 'BasicStyle/themeJSX';
 import { useState } from 'react';
-// import AddWaterModal from 'components/AddWaterModal/AddWaterModal';
 import { GlobalModal } from 'components/GlobalModal/GlobalModal';
 import { useSelector } from 'react-redux';
-// import { selectPercentage } from '../../../redux/tracker/selectors';
 import { selectDailyNorma } from '../../../redux/auth/selectors';
 import { selectEntries } from '../../../redux/tracker/selectors';
-import TodayListModal from 'components/AddWaterModal/TodayListModal';
-// import { selectDailyWaterAmount } from '../../../redux/tracker/selectors';
+import TodayListModal from 'components/AddWaterModal/AddWaterModal';
 
 export const WaterRadioPanel = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -17,13 +14,12 @@ export const WaterRadioPanel = () => {
   const handleOpenModal = () => {
     setOpenModal(true);
   };
-  // ************
+
   const entries = useSelector(selectEntries);
   const normUser = useSelector(selectDailyNorma);
   const total = entries.reduce((acc, currentValue) => acc + currentValue.amountWater, 0);
 
   const percentage = Math.round(total / (normUser * 10));
-  // ******
 
   let parsent = percentage;
   let bgColor;

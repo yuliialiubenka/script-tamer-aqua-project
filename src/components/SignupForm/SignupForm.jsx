@@ -67,7 +67,7 @@ const SignupForm = () => {
       try {
         await dispatch(register({ email, password }));
       } catch (error) {
-        console.log(error);
+        return error;
       }
     },
   });

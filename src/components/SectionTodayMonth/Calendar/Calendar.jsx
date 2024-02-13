@@ -47,12 +47,7 @@ const Calendar = () => {
   const [hoveredDayCoords, setHoveredDayCoords] = useState({ x: 0, y: 0 });
   const daysContainerRef = React.useRef(null);
   const monthAmountWater = useSelector(selectMonthWater);
-  // console.log(monthAmountWater);
-  // const dates = monthAmountWater.map(record => record.date);
-  // console.log(dates);
-  // monthAmountWater.forEach(record => {
-  //   console.log(record.percentage);
-  // });
+
   const entries = useSelector(selectEntries);
   const normUser = useSelector(selectDailyNorma);
   
@@ -102,7 +97,6 @@ const Calendar = () => {
     );
   };
   function findWaterRecordByDate(date) {
-    // console.log(date);
     return monthAmountWater ? monthAmountWater.find(record => record.date === date) : null;
     
   }
@@ -188,23 +182,19 @@ const Calendar = () => {
                           </h3>
                           <p>
                             Daily norma: <span>{record.dailyNorma}</span>
-                            {/* Daily norma: <span>4 L</span> */}
                           </p>
                           <p>
                             Fulfillment of the daily norm:{' '}
                             <span>{record.percentage}%</span>
-                            {/* <span>87%</span> */}
                           </p>
                           <p>
                             How many servings of water:{' '}
                             <span>{record.recordsWaterConsumption}</span>
-                            {/* <span>4</span> */}
                           </p>
                         </>
                       </Popup>
                     </Day>
                     <DayPercent>{record.percentage}%</DayPercent>
-                    {/* <DayPercent>1%</DayPercent> */}
                   </DayCell>
                 );
               })

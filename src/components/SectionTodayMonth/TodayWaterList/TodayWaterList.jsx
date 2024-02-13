@@ -23,11 +23,9 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { GlobalModal } from 'components/GlobalModal/GlobalModal';
-// import AddWaterModal from 'components/AddWaterModal/AddWaterModal';
 import { WaterDelModal } from 'components/WaterDelModal/WaterDelModal';
-// import { selectDailyWaterAmount } from '../../../redux/tracker/selectors';
 import { selectEntries } from '../../../redux/tracker/selectors';
-import TodayListModal from 'components/AddWaterModal/TodayListModal';
+import TodayListModal from 'components/AddWaterModal/AddWaterModal';
 
 const TodayWaterList = () => {
   const [openModalTodayList, setOpenModalTodayList] = useState(false);
@@ -35,10 +33,7 @@ const TodayWaterList = () => {
   const [currentItem, setCurrentItem] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
 
-  // const todayWater = useSelector(selectDailyWaterAmount);
   const dayList = useSelector(selectEntries);
-  // console.log(dayList);
-  // console.log(currentItem);
 
   const timeFromDate = date => {
     return new Date(date).toLocaleTimeString('en-US', {
@@ -98,19 +93,16 @@ const TodayWaterList = () => {
             </li>
           )}
         </UlStyle>
-            {/* <StyledLi> */}
             <AddBtnStyle onClick={handleOpenModalTodayListAdd}>
               <FaPlus />
               Add water
             </AddBtnStyle>
-          {/* </StyledLi> */}
       </ListAddDiv>
       {openModalTodayList && (
         <GlobalModal
           $position={'center'}
           openModal={openModalTodayList}
           setOpenModal={setOpenModalTodayList}
-          //  title={'add water'}
         >
           <TodayListModal
             closeModal={setOpenModalTodayList}

@@ -238,7 +238,6 @@ export const updateWaterRate = createAsyncThunk(
       // Notify.success(NOTIFICATIONS.SUCCESS.USER_UPDATED, paramsForNotify);
       return res.data;
     } catch (error) {
-      console.error(error);
       // Notify.failure(NOTIFICATIONS.FAILURE.USER_UPDATE, paramsForNotify);
       return thunkAPI.rejectWithValue(error.message);
     }

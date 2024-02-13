@@ -29,11 +29,10 @@ import {
   SubmitButton,
 } from './DailyModal.styled';
 
-const DailyNormalModal = ({ closeModal }) => {
+const DailyNormaModal = ({ closeModal }) => {
   const { gender: userGender } = useSelector(selectUser);
 
   const dailyNorma = useSelector(selectDailyNorma);
-  // console.log('dailyNorma...', dailyNorma);
   const [gender, setGender] = useState(userGender || 'female');
   const [weight, setWeight] = useState('');
   const [activeTraningHours, setActiveTraningHours] = useState('');
@@ -204,4 +203,4 @@ const DailyNormalModal = ({ closeModal }) => {
   );
 };
 
-export default DailyNormalModal;
+export default DailyNormaModal;

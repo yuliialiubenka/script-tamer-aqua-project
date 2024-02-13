@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Notiflix from 'notiflix';
+import { paramsForNotify } from '../../redux/notifications';
 import {
   deleteWaterEntry,
   getDailyWaterAmount,
@@ -19,12 +20,12 @@ export const WaterDelModal = ({ id, closeModal, title }) => {
   const handleDelete = () => {
     dispatch(deleteWaterEntry(id))
       .then(() => {
-        Notiflix.Notify.success('Record deleted successfully');
+        Notiflix.Notify.success('Record deleted successfully.', paramsForNotify);
         dispatch(getDailyWaterAmount());
         closeModal();
       })
       .catch(error => {
-        Notiflix.Notify.failure(`Failed to delete: ${error.message}`);
+        Notiflix.Notify.failure(`Failed to delete: ${error.message}`, paramsForNotify);
       });
     closeModal();
   };

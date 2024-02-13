@@ -8,7 +8,6 @@ import { refreshUser } from './redux/auth/operations';
 import { getDailyWaterAmount } from './redux/tracker/operations';
 import PageRoutes from './X_files/PageRoutes';
 import Loader from 'components/Loader/Loader';
-// import Spinner from 'components/Loader/Spinner';
 
 export const App = () => {
   const dispatch = useDispatch();
