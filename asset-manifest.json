@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/script-tamer-aqua-project/static/css/main.805d1c8b.css",
-    "main.js": "/script-tamer-aqua-project/static/js/main.4a401db0.js",
+    "main.js": "/script-tamer-aqua-project/static/js/main.eb1b5721.js",
     "static/js/279.0eedf5ad.chunk.js": "/script-tamer-aqua-project/static/js/279.0eedf5ad.chunk.js",
     "static/js/249.353af23d.chunk.js": "/script-tamer-aqua-project/static/js/249.353af23d.chunk.js",
     "static/js/985.1db23a97.chunk.js": "/script-tamer-aqua-project/static/js/985.1db23a97.chunk.js",
@@ -48,7 +48,7 @@
     "static/media/minus.svg": "/script-tamer-aqua-project/static/media/minus.ea7197da75e246fd86455c07dfd782d9.svg",
     "static/media/plus.svg": "/script-tamer-aqua-project/static/media/plus.a028f8daec495841fe42646bb539e349.svg",
     "main.805d1c8b.css.map": "/script-tamer-aqua-project/static/css/main.805d1c8b.css.map",
-    "main.4a401db0.js.map": "/script-tamer-aqua-project/static/js/main.4a401db0.js.map",
+    "main.eb1b5721.js.map": "/script-tamer-aqua-project/static/js/main.eb1b5721.js.map",
     "279.0eedf5ad.chunk.js.map": "/script-tamer-aqua-project/static/js/279.0eedf5ad.chunk.js.map",
     "249.353af23d.chunk.js.map": "/script-tamer-aqua-project/static/js/249.353af23d.chunk.js.map",
     "985.1db23a97.chunk.js.map": "/script-tamer-aqua-project/static/js/985.1db23a97.chunk.js.map",
@@ -63,6 +63,6 @@
   },
   "entrypoints": [
     "static/css/main.805d1c8b.css",
-    "static/js/main.4a401db0.js"
+    "static/js/main.eb1b5721.js"
   ]
 }
