@@ -11,6 +11,8 @@ export const RouterLink = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+
   &:hover {
     color: ${theme.colors.secondaryYellow};
     transition: color 0.3s ease;

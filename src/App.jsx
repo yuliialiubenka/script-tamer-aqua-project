@@ -1,5 +1,4 @@
 import React, { Suspense, useEffect} from 'react';
-import { useLocation } from 'react-router-dom';
 import { useAuth } from 'hooks';
 import AppBar from './pages/AppBar';
 import { Container } from 'pages/Pages.styled';
@@ -13,14 +12,13 @@ import Loader from 'components/Loader/Loader';
 export const App = () => {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.auth.token);
-  const currentPath = useLocation().pathname;
 
   useEffect(() => {
-    if (token && currentPath === '/home') {
+    if (token !== null) {
       dispatch(refreshUser());
       dispatch(getDailyWaterAmount());
     }
-  }, [token, currentPath, dispatch]);
+  }, [token, dispatch]);
 
   const { isRefreshing } = useAuth();
 
