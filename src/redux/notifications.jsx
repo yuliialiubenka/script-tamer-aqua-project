@@ -19,7 +19,7 @@ export const NOTIFICATIONS = {
     INFO: {
       WELCOME: 'Welcome to Tracker of Water!',
       LOGOUT: `We're going to miss you...`,
-      UNAUTHORIZED: 'To continue working, please log in.',
+      UNAUTHORIZED: 'To continue using this app, please log in.',
     },
 };
   
