@@ -110,7 +110,6 @@ export const refreshUser = createAsyncThunk(
           Notify.failure(NOTIFICATIONS.FAILURE.FETCHING_USER, paramsForNotify);
           return thunkAPI.rejectWithValue(error.message);
         case 401:
-          Notify.failure(NOTIFICATIONS.FAILURE.UNAUTHORIZED, paramsForNotify);
           return thunkAPI.rejectWithValue(error.message);
         case 500:
           Notify.failure(NOTIFICATIONS.FAILURE.SERVER, paramsForNotify);
